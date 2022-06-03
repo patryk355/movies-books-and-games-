@@ -1,8 +1,7 @@
 const tiles = document.querySelectorAll('.tile');
 tiles.forEach((tile) => {
   tile.addEventListener('click', () => {
-    console.log(document.location.href);
-    window.location.href = `/subpages/${tile.id}.html`;
+    window.location.href = `../subpages/${tile.id}.html`;
   });
 });
 
