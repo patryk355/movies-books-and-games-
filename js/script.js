@@ -1,13 +1,16 @@
 const tiles = document.querySelectorAll('.tile');
 tiles.forEach((tile) => {
   tile.addEventListener('click', () => {
-    let str = '';
-    if (window.location.href.includes('index')) str = 'index';
-
-    window.location.href = window.location.href.replace(
-      str,
-      `subpages/${tile.id}`
-    );
+    if (window.location.href.includes('index')) {
+      window.location.href = window.location.href.replace(
+        'index',
+        `subpages/${tile.id}`
+      );
+    } else {
+      window.location.href = window.location.href.concat(
+        `subpages/${tile.id}.html`
+      );
+    }
   });
 });
 
