@@ -1,9 +1,11 @@
 const tiles = document.querySelectorAll('.tile');
 tiles.forEach((tile) => {
   tile.addEventListener('click', () => {
-    // window.location.href = `../subpages/${tile.id}.html`;
+    let str = '';
+    if (window.location.href.includes('index')) str = 'index';
+
     window.location.href = window.location.href.replace(
-      'index',
+      str,
       `subpages/${tile.id}`
     );
   });
